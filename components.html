@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cockatiel Cottage Design System</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav_content">
+      <a href="index.html"
+        ><div style="color: white">
+          <h2>Cockatiel Cottage: Style Guide</h2>
+        </div></a
+      >
+      <ul>
+        <li><a href="tokens.html">Tokens</a></li>
+        <li><a class="active" href="components.html">Components</a></li>
+        <li><a href="patterns.html">Patterns</a></li>
+      </ul>
+    </nav>
+      <table style="width: 100%">
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+          <col style="width: 40%;">
+          <col style="width: 30%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Buttons</th>
+            <th>Description</th>
+            <th>Notes</th>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Template:</p>
+              <button style="margin-bottom: 20px;" class="button_primary"><i class="fa fa-square"></i> Primary Button</button>
+              <p>Example:</p>
+              <button role="post button" class="button_primary"><i class="fa fa-pencil-alt"></i> Post</button>
+              
+            </td>
+            <td><p>Primary Button</p>
+            <p>CSS Class: button_primary</p></td>
+            <td>
+              <p>Use as a primary call to action. The primary button is a high contrast when combined with the light surface background. This button is styled with the brand's primary blue color, and this button continues to establish that connection with the user.</p>
+              <p>Best Practices:</p>
+              <ul>
+                <li>Ensure that the button has proper contrast with the background. If using the dark surface background, the secondary button would be a better fit.</li>
+                <li>Look up the appropriate icon from Font Awesome for any button to ensure consistency.</li>
+              </ul>
+            </td>
+            <td>
+              <pre>
+                <code>
+** CSS **
+
+.button_primary {
+  background-color: #243966;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.button_primary:hover {
+  background-color: #29488b;
+}
+
+
+** HTML **
+
+&lt;button role="post button" class="button_primary"&gt;
+  &lt;i class="fa fa-pencil-alt"&gt;&lt;/i&gt; Post
+&lt;/button&gt;
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Template:</p>
+              <button class="button_secondary"><i class="fa fa-square"></i> Secondary Button</button>
+              <p>Examples:</p>
+              <button role="share button" class="button_secondary"><i class="fa fa-share"></i> Share</button>
+            </p>
+            </td>
+            <td>Secondary Button</td>
+            <td>
+              <p>The secondary button can be used for alternate actions like in the example shown on the left. To avoid confusing the user, it should only be used along with the primary button.</p>
+              <p>Best Practices:</p>
+              <ul>
+                <li>Ensure that the white text inside this button is not too small, as the contrast ratio is not as high as the primary button.</li>
+              </ul>
+            </td>
+            <td>
+              <pre>
+                <code>
+** CSS **
+
+.button_secondary {
+  background-color: #e63462;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.button_secondary:hover {
+  background-color: #ff3a6f;
+}
+
+
+
+** HTML **
+
+&lt;button role="cancel button" class="button_secondary"&gt;
+  &lt;i class="fa fa-share"&gt;&lt;/i&gt; Share
+&lt;/button&gt;
+                </code>
+              </pre>
+            </td>
+          </tr>
+            <tr>
+            <td>
+              <p>Template:</p>
+              <button class="button_tertiary"><i class="fa fa-square"></i> Tertiary Button</button>
+              <p>Examples:</p>
+              <button role="cancel button" class="button_tertiary"><i class="fa fa-ban"></i> Cancel</button>
+            </p>
+            </td>
+            <td>Tertiary Button</td>
+            <td>
+              <p>The tertiary button is generally for actions that do not need to be used very often. For example, it can be used to terminate a user account, or delete a post.</p>
+              <p>Best Practices:</p>
+              <ul>
+                <li>Similar to the secondary button, this should only be used when paired with at least the primary button to avoid confusing the user.</li>
+              </ul>
+            </td>
+            <td>
+              <pre>
+                <code>
+** CSS **
+
+.button_tertiary {
+  background-color: #4f4f4f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.button_tertiary:hover {
+  background-color: #7b7b7b;
+  color: white;
+}
+
+
+** HTML **
+
+&lt;button role="cancel button" class="button_tertiary"&gt;
+  &lt;i class="fa fa-ban"&gt;&lt;/i&gt; Cancel
+&lt;/button&gt;
+                </code>
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table style="width: 100%">
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+          <col style="width: 40%;">
+          <col style="width: 30%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Input Field</th>
+            <th>Description</th>
+            <th>Notes</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <form class="search_bar">
+                <input
+                  class="input_search"
+                  type="text"
+                  placeholder="Search..."
+                />
+                <button role="search button" class="search_button" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </td>
+            <td>Search Bar</td>
+            <td>
+              <p>This component can be used to provide a search functionality on various areas on the website. For example, it can be used in the message board to search through existing posts. It can also be used to search through articles and content on the website.</p>
+              <p>Best Practices:</p>
+              <ul>
+                <li>Place the search bar in the top part of the page so that the user can see that it the ideal way to quickly search through content.</li>
+                <li>Ensure that the blue button on the left has adequate contrast with the background.</li>
+              </ul>
+            </td>
+            <td>
+              <pre>
+                <code>
+** CSS **
+
+.search_bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.search_input {
+  width: 100%;
+  min-height: 30px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border: 2px solid black;
+  border-right: none;
+  padding-left: 2%;
+}
+
+.input_search:hover {
+  border: 2px solid #7e7e7e;
+  border-right: none;
+}
+
+.search_button {
+  background-color: #243966;
+  color: white;
+  border: 2px solid black;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  min-width: 30px;
+  cursor: pointer;
+}
+
+.search_button:hover {
+  background-color: #e63462;
+}
+
+
+** HTML **
+
+&ltform class="search_bar"&gt
+&ltinput
+class="search_input"
+type="text"
+placeholder="Search..."
+/&gt
+&ltbutton role="search button" class="search_button" type="submit"&gt
+&lti class="fa fa-search">&lt/i&gt
+&lt/button&gt
+&lt/form&gt
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea role="long input" class="input_text" type="text" placeholder="Placeholder..."></textarea>
+            </td>
+            <td>Long Input Box</td>
+            <td>
+              <p>This long text box is used to collect long form user input. This can be used for comment posts, message board posts, or contact forms.</p>
+              <p>Best Practices:</p>
+              <ul>
+                <li>Make sure to put a label on this box so that the user understands what they are typing in.</li>
+                <li>The size of this box can be customized to fit different interfaces using "height" and "width" style tags.</li>
+              </ul>
+            </td>
+            <td>
+              <pre>
+                <code>
+** CSS **
+
+.input_text {
+  resize: vertical;
+  width: 100%;
+  min-height: 30px;
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 2%;
+  box-sizing: border-box;
+  min-height: 200px;
+}
+
+.input_text:hover {
+  border: 2px solid #7e7e7e;
+}
+
+
+** HTML **
+
+&lttextarea role="long text input" class="text_input" type="text"&gt&lt/textarea&gt
+                </code>
+              </pre>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input role="short input" class="input_short" type="text" placeholder="Placeholder..."></input>
+            </td>
+            <td><p>Short Input Box</p>
+              <p>CSS Class: input_short</p>
+            </td>
+            <td>
+              <p>
+                The short input box is used for shortform input like names, or emails. This is generally used for elements like login and password entry boxes.
+              </p>
+              <p>Best Practices:</p>
+              <ul>
+                <li>Like the long input box, ensure that these also have tags that indicate for the user what they are typing in. </li>
+              </ul>
+          </td>
+            <td>
+              <pre>
+                <code>
+** CSS **
+
+.input_short {
+  font-family: "Poppins", san-serif;
+  font-size: 1rem;
+  resize: vertical;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 2%;
+  box-sizing: border-box;
+  height: 30px;
+  background-color: rgb(246, 246, 246);
+  box-shadow: inset 3px 3px 5px rgb(205, 205, 205);
+}
+
+.input_short:hover {
+  border: 2px solid #000000b8;
+}
+
+
+** HTML **
+
+&lt;input role="Short Input" class="input_short" type="text" placeholder="Placeholder..."&gt;
+                </code>
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <script
+      src="https://kit.fontawesome.com/bfda9ad107.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

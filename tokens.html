@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cockatiel Cottage Design System</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav_content">
+      <a href="index.html"
+        ><div style="color: white">
+          <h2>Cockatiel Cottage: Style Guide</h2>
+        </div></a
+      >
+      <ul>
+        <li><a class="active" href="tokens.html">Tokens</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="patterns.html">Patterns</a></li>
+      </ul>
+    </nav>
+    <table style="width: 100%">
+      <colgroup>
+        <col style="width: 20%" />
+        <col style="width: 20%" />
+        <col style="width: 40%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Color</th>
+          <th>Description</th>
+          <th>Notes</th>
+          <th>Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="background-color: #243966" class="colorBlock"></td>
+          <td>Primary Brand Color</td>
+          <td>
+            This is the primary brand color that will be seen throughout the
+            website. It is used for main calls to action, and important elements
+            like the navbar.
+          </td>
+          <td>#243966</td>
+        </tr>
+        <tr>
+          <td style="background-color: #e63462" class="colorBlock"></td>
+          <td>Secondary Brand Color</td>
+          <td>
+            The secondary brand color is used for alternate actions. It is also
+            used in the box-shadow token as a way to separate elements from the
+            background.
+          </td>
+          <td>#e63462</td>
+        </tr>
+        <tr>
+          <td style="background-color: #f7b801" class="colorBlock"></td>
+          <td>Accent Brand Color</td>
+          <td>
+            This brand accent color is used sparingly, and only used for
+            elements that need it to prevent the interface from looking too
+            buys.
+          </td>
+          <td>#f7b801</td>
+        </tr>
+        <tr>
+          <td style="background-color: #000000" class="colorBlock"></td>
+          <td>Dark Text Color</td>
+          <td>
+            Works well with light color surface, this is generally the color of
+            text elements seen on the website.
+          </td>
+          <td>#000000</td>
+        </tr>
+        <tr>
+          <td style="background-color: #fcfcfc" class="colorBlock"></td>
+          <td>Light Text Color</td>
+          <td>
+            The opposite of the dark color text, this is used on top of elements
+            that utilize the primary brand color, such as buttons or the nav
+            bar.
+          </td>
+          <td>#fcfcfc</td>
+        </tr>
+        <tr>
+          <td style="background-color: #f7f9fe" class="colorBlock"></td>
+          <td>Light Surface Color</td>
+          <td>
+            This light surface color is generally for articles or content that
+            requires the user to read. It provides high contrast with the dark
+            text.
+          </td>
+          <td>#f7f9fe</td>
+        </tr>
+        <tr>
+          <td style="background-color: #010a18" class="colorBlock"></td>
+          <td>Dark Surface Color</td>
+          <td>
+            The dark surface color is used much in the same way as the light
+            surface color, but instead used with light text. It can be used for
+            footer content for example.
+          </td>
+          <td>#010a18</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table style="width: 100%">
+      <colgroup>
+        <col style="width: 20%" />
+        <col style="width: 20%" />
+        <col style="width: 40%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Typography</th>
+          <th>Description</th>
+          <th>Notes</th>
+          <th>Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p class="display_lg">Display Large</p></td>
+          <td>Large Accent Display Text</td>
+          <td>
+            This is a large accent text, and should be used sparingly. It's main
+            purpose is to create a hand made and welcoming feel to the website.
+          </td>
+          <td>
+            <pre>
+                <code>
+** CSS **
+
+.display_lg {
+  font-family: "Just Another Hand", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+** HTML **
+
+&ltp class="display_lg"&gtDisplay Large&lt/p&gt
+                </code>
+              </pre>
+          </td>
+        </tr>
+        <tr>
+          <td><p class="display_sm">Display Small</p></td>
+          <td>Small Accent Display Text</td>
+          <td>
+            Similar to the large display accent text, this should be used
+            sparingly. The size of this text works better when paired with the
+            body text, and can be used within paragraphs to bring attention to
+            specific words or short phrases.
+          </td>
+          <td>
+            <pre>
+                <code>
+** CSS **
+
+.display_sm {
+  font-family: "Just Another Hand", serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+** HTML **
+
+&ltp class="display_sm"&gtDisplay Small&lt/p&gt
+                </code>
+              </pre>
+          </td>
+        </tr>
+        <tr>
+          <td><h1>Header Large</h1></td>
+          <td>Larger Header Text</td>
+          <td>
+            Use the H1 tag to utilize this font. This can be used as main
+            section headers, and should generally be used more than the accent
+            text.
+          </td>
+          <td>
+            <pre>
+                <code>
+** CSS **
+
+h1 {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+** HTML **
+
+&lth1&gtHeader Large&lt/h1&gt
+                </code>
+              </pre>
+          </td>
+        </tr>
+        <tr>
+          <td><h2>Header Small</h2></td>
+          <td>Small Header Text</td>
+          <td>
+            Useful for subtitles or headers to highlight sections within long
+            text.
+          </td>
+          <td>
+            <pre>
+                <code>
+** CSS **
+
+h2 {
+  font-family: "Poppins", serif;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+** HTML **
+
+&lth2&gtHeader Small&lt/h2&gt
+                </code>
+              </pre>
+          </td>
+        </tr>
+        <tr>
+          <td><p class="body_text">Body</p></td>
+          <td>Body Text</td>
+          <td>
+            This is the default text that most of the body text will use. It
+            uses the HTML default of 16px. Ensure that the contrast with the
+            background is enough as this text is small.
+          </td>
+          <td>
+            <pre>
+                <code>
+** CSS **
+
+.body_text {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+** HTML **
+
+&ltp class="body_text"&gtBody&lt/p&gt
+                </code>
+              </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table style="width: 100%">
+      <colgroup>
+        <col style="width: 20%" />
+        <col style="width: 20%" />
+        <col style="width: 40%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Box Shadows</th>
+          <th>Description</th>
+          <th>Notes</th>
+          <th>Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div
+              role="imagePlaceholder"
+              class="image_placeholder shadow_accent"
+            ></div>
+          </td>
+          <td>Box Shadows</td>
+          <td>
+            <p>
+              This box shadow can be used to separate an element from the
+              background.
+            </p>
+            <p>Best Practices:</p>
+            <ul>
+              <li>For elements that need separation from the background.</li>
+              <li>
+                Should be used consistently or not at all to avoid confusing the
+                user.
+              </li>
+            </ul>
+          </td>
+          <td>
+            <pre>
+                <code>
+** CSS **
+
+.shadow_accent {
+  box-shadow: 5px 5px #e63462;
+}
+
+** HTML **
+
+&lt;div class="image_placeholder shadow_accent"&gt;&lt;/div&gt;
+                </code>
+              </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

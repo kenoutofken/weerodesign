@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cockatiel Cottage Design System</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav_content">
+      <a href="index.html"
+        ><div style="color: white">
+          <h2>Cockatiel Cottage: Style Guide</h2>
+        </div></a
+      >
+      <ul>
+        <li><a href="tokens.html">Tokens</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a class="active" href="patterns.html">Patterns</a></li>
+      </ul>
+    </nav>
+    <table style="width: 100%">
+      <colgroup>
+        <col style="width: 30%" />
+        <col style="width: 10%" />
+        <col style="width: 30%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Patterns</th>
+          <th>Description</th>
+          <th>Notes</th>
+          <th>Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <form role="contact form" class="contact_form">
+              <label for="fname">First name:</label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                class="input_short"
+                style="width: 50%"
+              />
+              <br />
+              <label for="lname">Last name:</label>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                class="input_short"
+                style="width: 50%"
+              />
+              <br />
+              <label for="message">Message:</label>
+              <textarea class="input_text" type="text"></textarea>
+              <div><button class="button_primary">Submit</button></div>
+            </form>
+          </td>
+          <td>Contact Form</td>
+          <td>
+            <p>
+              The contact form is designed for collecting user input. This
+              component can be used and customized for other elements as well
+              such as a guestbook.
+            </p>
+            <p>Best Practices:</p>
+            <ul>
+              <li>Include clear label that descxribe each input field.</li>
+
+              <li>
+                Ensure there is sufficient contrast so that the contact form
+                doesn't get lost in the background.
+              </li>
+              <li>
+                Keep a clearly seen primary action button, like a submit or post
+                button.
+              </li>
+            </ul>
+          </td>
+          <td>
+            <pre>
+                <code>
+** CSS **
+
+/* Contact Form */
+
+.contact_form {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  color: rgb(0, 0, 0);
+  gap: 4px;
+  box-shadow: 5px 5px 10px rgb(231, 229, 229);
+  border-radius: 12px;
+}
+
+** HTML **
+
+&lt;form role="contact form" class="contact_form"&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;
+  &lt;input
+    type="text"
+    id="fname"
+    name="fname"
+    class="input_short"
+    style="width: 50%"
+  /&gt;
+  &lt;br /&gt;
+  &lt;label for="lname"&gt;Last name:&lt;/label&gt;
+  &lt;input
+    type="text"
+    id="lname"
+    name="lname"
+    class="input_short"
+    style="width: 50%"
+  /&gt;
+  &lt;br /&gt;
+  &lt;label for="message"&gt;Message:&lt;/label&gt;
+  &lt;textarea class="input_text" type="text"&gt;&lt;/textarea&gt;
+  &lt;div&gt;
+    &lt;button class="button_primary"&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+                </code>
+              </pre>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div role="content card" class="card">
+              <div class="image_placeholder"></div>
+              <div class="card_content">
+                <h2>Header</h2>
+                <p class="body_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  at vehicula erat. Proin consectetur ante turpis, a egestas
+                  dolor malesuada sit amet.
+                </p>
+              </div>
+            </div>
+          </td>
+          <td>Cards</td>
+          <td>
+            <p>
+              Can be used for showcasing content on the website, like articles
+              or products for sale like bird food and printed pictures.
+            </p>
+            <p>Best Practices:</p>
+            <ul>
+              <li>
+                Use a properly cropped image in the card so that the 1:1 aspect
+                ratio display correctly.
+              </li>
+              <li>Keep the description short to the text fits on the card</li>
+            </ul>
+          </td>
+          <td>
+            <pre>
+                <code>
+** CSS **
+
+/* Card */
+
+.card {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  width: 300px;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgb(231, 229, 229);
+  border-radius: 12px;
+}
+
+.card_content {
+  padding: 12px;
+  margin: 12px;
+}
+
+.image_placeholder {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  background-color: rgb(234, 234, 234);
+  border: 2px dashed rgb(255, 255, 255);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+** HTML **
+
+&lt;div role="content card" class="card"&gt;
+  &lt;div class="image_placeholder"&gt;&lt;/div&gt;
+  &lt;div class="card_content"&gt;
+    &lt;h2&gt;Header&lt;/h2&gt;
+    &lt;p class="body_text"&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      at vehicula erat. Proin consectetur ante turpis, a egestas
+      dolor malesuada sit amet.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+                </code>
+              </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
