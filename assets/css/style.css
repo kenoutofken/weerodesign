@@ -1,0 +1,321 @@
+/* General Style Guide CSS */
+
+html {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: #f7f9fe;
+  padding: 96px;
+  gap: 48px;
+}
+
+main {
+  display: grid;
+  width: 80%;
+  height: 100vh;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+table {
+  border-collapse: collapse;
+  box-shadow: 10px 10px #e63462;
+  margin: 32px 32px 96px 32px;
+  box-sizing: border-box;
+}
+
+thead {
+  background-color: #000000;
+  color: white;
+}
+th {
+  text-align: left;
+  padding: 12px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f7f9;
+}
+
+td {
+  height: 48px;
+  padding: 24px;
+  border-bottom: 2px solid rgb(215, 215, 215);
+}
+
+.colorBlock {
+  width: fit-content;
+  border: 1px solid;
+}
+
+/* Navigation Style Guide CSS */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  box-sizing: border-box;
+  border-bottom: 4px solid #000000;
+}
+
+.nav_content ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav_content a {
+  text-decoration: none;
+  color: #ffffff;
+  padding-left: 36px;
+}
+
+.nav_content a:hover {
+  color: #e63462;
+}
+
+/* Style Guide - Tokens - Typography */
+
+.display_lg {
+  font-family: "Just Another Hand", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.display_sm {
+  font-family: "Just Another Hand", serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.body_text {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style Guide - Tokens - Box Shadows */
+
+.shadow_accent {
+  box-shadow: 5px 5px #e63462;
+}
+
+/* Style Guide - Components - Buttons */
+
+.button_primary {
+  background-color: #243966;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.button_primary:hover {
+  background-color: #29488b;
+}
+
+.button_secondary {
+  background-color: #e63462;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.button_secondary:hover {
+  background-color: #ff3a6f;
+}
+
+.button_tertiary {
+  background-color: #4f4f4f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.button_tertiary:hover {
+  background-color: #7b7b7b;
+  color: white;
+}
+
+/* Style Guide - Components - Input Field CSS */
+
+.search_bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.input_search {
+  font-family: "Poppins", san-serif;
+  font-size: 1rem;
+  width: 100%;
+  min-height: 30px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border: 2px solid black;
+  border-right: none;
+  padding-left: 2%;
+  background-color: rgb(246, 246, 246);
+  box-shadow: inset 3px 3px 5px rgb(205, 205, 205);
+}
+
+.input_search:hover {
+  border: 2px solid #7e7e7e;
+  border-right: none;
+}
+
+.search_button {
+  background-color: #243966;
+  color: white;
+  border: 2px solid black;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  min-width: 30px;
+  cursor: pointer;
+}
+
+.search_button:hover {
+  background-color: #29488b;
+}
+
+.input_text {
+  font-family: "Poppins", san-serif;
+  font-size: 1rem;
+  resize: vertical;
+  width: 100%;
+  min-height: 30px;
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 2%;
+  box-sizing: border-box;
+  min-height: 200px;
+  background-color: rgb(246, 246, 246);
+  box-shadow: inset 3px 3px 5px rgb(205, 205, 205);
+}
+
+.input_text:hover {
+  border: 2px solid #7e7e7e;
+}
+
+.input_short {
+  font-family: "Poppins", san-serif;
+  font-size: 1rem;
+  resize: vertical;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 2%;
+  box-sizing: border-box;
+  height: 30px;
+  background-color: rgb(246, 246, 246);
+  box-shadow: inset 3px 3px 5px rgb(205, 205, 205);
+}
+
+.input_short:hover {
+  border: 2px solid #000000b8;
+}
+
+/* Style Guide - Patterns - Forms */
+
+.contact_form {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  color: rgb(0, 0, 0);
+  gap: 4px;
+  border-radius: 12px;
+}
+
+/* Style Guide - Patterns - Cards */
+
+.card {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  width: 300px;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 575px;
+}
+
+.card_content {
+  padding: 12px;
+  margin: 12px;
+}
+
+.image_placeholder {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  background-color: rgb(234, 234, 234);
+  border: 2px dashed rgb(255, 255, 255);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
